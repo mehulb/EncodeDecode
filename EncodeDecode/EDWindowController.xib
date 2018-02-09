@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12120"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="EDWindowController">
+            <connections>
+                <outlet property="decTextView" destination="V63-Dt-Gaa" id="gms-OS-gTA"/>
+                <outlet property="encTextView" destination="CVd-eM-5wl" id="e1K-Yx-wbT"/>
+                <outlet property="window" destination="5ZG-SM-Pb4" id="tUH-En-6yS"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Encode-Decode" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="5ZG-SM-Pb4">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="1476" y="558" width="718" height="418"/>
+            <rect key="screenRect" x="1280" y="351" width="1920" height="1058"/>
+            <view key="contentView" id="hIc-c5-yoi">
+                <rect key="frame" x="0.0" y="0.0" width="718" height="418"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <splitView arrangesAllSubviews="NO" autosaveName="split_view" dividerStyle="paneSplitter" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mHb-mC-o32">
+                        <rect key="frame" x="0.0" y="0.0" width="718" height="418"/>
+                        <subviews>
+                            <customView id="hht-oq-oQ7">
+                                <rect key="frame" x="0.0" y="0.0" width="356" height="418"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <subviews>
+                                    <scrollView wantsLayer="YES" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oux-sF-ldz">
+                                        <rect key="frame" x="0.0" y="0.0" width="356" height="418"/>
+                                        <clipView key="contentView" id="Wj4-8I-Lky">
+                                            <rect key="frame" x="0.0" y="0.0" width="356" height="418"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <textView importsGraphics="NO" richText="NO" selectionGranularity="paragraph" findStyle="panel" allowsUndo="YES" allowsNonContiguousLayout="YES" smartInsertDelete="YES" id="CVd-eM-5wl">
+                                                    <rect key="frame" x="0.0" y="-1" width="356" height="418"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <size key="minSize" width="356" height="418"/>
+                                                    <size key="maxSize" width="463" height="10000000"/>
+                                                    <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                </textView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </clipView>
+                                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="gzY-kY-yN2">
+                                            <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </scroller>
+                                        <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="g2d-k2-9BW">
+                                            <rect key="frame" x="340" y="0.0" width="16" height="418"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </scroller>
+                                    </scrollView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Oux-sF-ldz" firstAttribute="leading" secondItem="hht-oq-oQ7" secondAttribute="leading" id="1lb-cn-u3G"/>
+                                    <constraint firstItem="Oux-sF-ldz" firstAttribute="top" secondItem="hht-oq-oQ7" secondAttribute="top" id="N9h-aG-xN8"/>
+                                    <constraint firstAttribute="bottom" secondItem="Oux-sF-ldz" secondAttribute="bottom" id="dWI-Qz-aQL"/>
+                                    <constraint firstAttribute="trailing" secondItem="Oux-sF-ldz" secondAttribute="trailing" id="liT-vA-yrm"/>
+                                </constraints>
+                            </customView>
+                            <customView id="WKA-q8-MHs">
+                                <rect key="frame" x="366" y="0.0" width="352" height="418"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <subviews>
+                                    <scrollView wantsLayer="YES" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Olm-S7-hes">
+                                        <rect key="frame" x="0.0" y="0.0" width="352" height="418"/>
+                                        <clipView key="contentView" id="3X5-tO-CLO">
+                                            <rect key="frame" x="0.0" y="0.0" width="352" height="418"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <textView importsGraphics="NO" richText="NO" selectionGranularity="paragraph" findStyle="panel" allowsUndo="YES" allowsNonContiguousLayout="YES" smartInsertDelete="YES" id="V63-Dt-Gaa">
+                                                    <rect key="frame" x="0.0" y="-1" width="352" height="418"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <size key="minSize" width="352" height="418"/>
+                                                    <size key="maxSize" width="463" height="10000000"/>
+                                                    <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                </textView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </clipView>
+                                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="tNK-3i-6qO">
+                                            <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </scroller>
+                                        <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="B8d-Th-qpV">
+                                            <rect key="frame" x="336" y="0.0" width="16" height="418"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </scroller>
+                                    </scrollView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Olm-S7-hes" firstAttribute="top" secondItem="WKA-q8-MHs" secondAttribute="top" id="Iqe-eG-Uwp"/>
+                                    <constraint firstAttribute="trailing" secondItem="Olm-S7-hes" secondAttribute="trailing" id="JBz-PX-ACS"/>
+                                    <constraint firstItem="Olm-S7-hes" firstAttribute="leading" secondItem="WKA-q8-MHs" secondAttribute="leading" id="W3g-wg-zUY"/>
+                                    <constraint firstAttribute="bottom" secondItem="Olm-S7-hes" secondAttribute="bottom" id="p0B-W5-r26"/>
+                                </constraints>
+                            </customView>
+                        </subviews>
+                        <holdingPriorities>
+                            <real value="250"/>
+                            <real value="250"/>
+                        </holdingPriorities>
+                    </splitView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="mHb-mC-o32" firstAttribute="leading" secondItem="hIc-c5-yoi" secondAttribute="leading" id="BTM-S3-ETZ"/>
+                    <constraint firstAttribute="bottom" secondItem="mHb-mC-o32" secondAttribute="bottom" id="Rkq-ji-qIy"/>
+                    <constraint firstItem="mHb-mC-o32" firstAttribute="top" secondItem="hIc-c5-yoi" secondAttribute="top" id="RuN-6e-MkX"/>
+                    <constraint firstAttribute="trailing" secondItem="mHb-mC-o32" secondAttribute="trailing" id="c1I-uT-Flh"/>
+                </constraints>
+            </view>
+            <toolbar key="toolbar" implicitIdentifier="57A589B9-C1F5-4F80-ADA5-1B577F8572E3" autosavesConfiguration="NO" allowsUserCustomization="NO" displayMode="iconAndLabel" sizeMode="small" id="6K4-EL-9Ls">
+                <allowedToolbarItems>
+                    <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="pFn-8W-zzi"/>
+                    <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="VNI-xJ-HU8"/>
+                    <toolbarItem implicitItemIdentifier="2638B4FF-56D1-4E73-AA18-E92EB323E19F" label="Encode (⌘+e)" paletteLabel="Encode" tag="-1" id="dSn-NU-HoN">
+                        <connections>
+                            <action selector="encodeToolbarItem_Clicked:" target="-2" id="0c8-Li-P9z"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="B813264E-2910-4B77-AEE7-B7C64BBAB76D" label="Decode(⌘+d)" paletteLabel="Decode" tag="-1" id="E20-V8-Epc">
+                        <connections>
+                            <action selector="decodeToolbarItem_Clicked:" target="-2" id="dEM-LF-xuV"/>
+                        </connections>
+                    </toolbarItem>
+                </allowedToolbarItems>
+                <defaultToolbarItems>
+                    <toolbarItem reference="dSn-NU-HoN"/>
+                    <toolbarItem reference="VNI-xJ-HU8"/>
+                    <toolbarItem reference="E20-V8-Epc"/>
+                </defaultToolbarItems>
+            </toolbar>
+            <connections>
+                <outlet property="delegate" destination="-2" id="YVU-zP-03j"/>
+            </connections>
+            <point key="canvasLocation" x="261" y="486"/>
+        </window>
+    </objects>
+</document>
